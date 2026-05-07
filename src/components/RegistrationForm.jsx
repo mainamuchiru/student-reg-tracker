@@ -2,6 +2,13 @@ import { useFormik } from "formik";
 import React, { useState, useEffect } from "react";
 
 const studentsArr = [];
+const courses = [
+    "Computer Science",
+    "Information Technology",
+    "CyberSecurity",
+    "Data Science",
+    "Networking",
+  ];
 
 const RegistrationForm = () => {
   let [students, setStudents] = useState([]);
@@ -9,15 +16,9 @@ const RegistrationForm = () => {
   useEffect(() => {
     console.log(students)
     document.title = `${students.length} Successfully added`;
-  }, [students]);
+  }, [students])
 
-  const courses = [
-    "Computer Science",
-    "Information Technology",
-    "CyberSecurity",
-    "Data Science",
-    "Networking",
-  ];
+  
 
   const id = 0;
   const formik = useFormik({
@@ -57,7 +58,7 @@ const RegistrationForm = () => {
         <input
           id="email"
           name="email"
-          type="text"
+          type="email"
           onChange={formik.handleChange}
           value={formik.values.email}
           required
