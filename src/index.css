@@ -1,0 +1,14 @@
+.formik {
+  display:flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 240px;
+}
+
+.form-container{
+  display: flex;
+  flex-direction: column;
+  padding:10px;
+  align-items: center;
+  justify-content: center;
+}
